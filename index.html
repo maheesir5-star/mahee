@@ -3,354 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shahriar Jaman Mahee - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
-body{
-    background:#f9f9f9;
-    line-height:1.6;
-}
-
-/* NAVBAR */
-#navbar{
-    background:#111;
-    color:#fff;
-    position:fixed;
-    width:100%;
-    top:0;
-    z-index:1000;
-}
-
-.nav-container{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 20px;
-}
-
-.logo{
-    font-family:'Montserrat',sans-serif;
-    font-size:20px;
-}
-
-.nav-links{
-    list-style:none;
-    display:flex;
-}
-
-.nav-links li a{
-    color:#fff;
-    text-decoration:none;
-    padding:10px 15px;
-    display:block;
-}
-
-.nav-links li a:hover{
-    background:#444;
-    border-radius:5px;
-}
-
-.hamburger{
-    display:none;
-    flex-direction:column;
-    cursor:pointer;
-}
-
-.hamburger span{
-    background:#fff;
-    height:3px;
-    width:25px;
-    margin:4px;
-}
-
-/* HERO */
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:100px 20px 50px;
-    background:#222;
-    color:#fff;
-}
-
-.hero h1{
-    font-size:2.5rem;
-}
-
-.subtitle{
-    font-size:1.2rem;
-    margin:10px 0;
-}
-
-/* SECTIONS */
-.section{
-    padding:60px 20px;
-}
-
-.container{
-    max-width:1100px;
-    margin:auto;
-}
-
-h2{
-    text-align:center;
-    margin-bottom:30px;
-    font-family:'Montserrat';
-}
-
-/* CARDS */
-.card{
-    background:#fff;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,.1);
-}
-
-/* GRID SYSTEMS */
-.skills-grid,
-.achievements-grid,
-.hobbies-grid,
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.skill-card{
-    background:#111;
-    color:#fff;
-    padding:15px;
-    text-align:center;
-    border-radius:8px;
-}
-
-/* CONTACT FORM */
-input, textarea{
-    width:100%;
-    padding:10px;
-    margin:10px 0;
-    border-radius:5px;
-    border:1px solid #ccc;
-}
-
-button{
-    background:#111;
-    color:#fff;
-    border:none;
-    padding:12px;
-    width:100%;
-    border-radius:5px;
-    cursor:pointer;
-}
-
-/* FOOTER */
-footer{
-    background:#111;
-    color:#fff;
-    text-align:center;
-    padding:15px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-    .nav-links{
-        position:absolute;
-        top:60px;
-        left:0;
-        width:100%;
-        background:#111;
-        flex-direction:column;
-        display:none;
-    }
-
-    .nav-links.active{
-        display:flex;
-    }
-
-    .hamburger{
-        display:flex;
-    }
-
-    .hero h1{
-        font-size:1.8rem;
-    }
-
-    .subtitle{
-        font-size:1rem;
-    }
-}
-        </style>
+    <meta name="description" content="Professional Portfolio of [Your Name] - Developer, Student, and Innovator">
+    <meta name="keywords" content="portfolio, developer, student, skills, projects">
+    <title>[Your Name] - Professional Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
     <header>
-        <nav id="navbar">
-            <div class="nav-container">
-                <h1 class="logo">Shahriar Jaman Mahee</h1>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#achievements">Achievements</a></li>
-                    <li><a href="#goals">Future Goals</a></li>
-                    <li><a href="#hobbies">Hobbies & Sports</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+        <nav>
+            <div class="logo">[Your Name]</div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="hero">
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
             <div class="hero-content">
-                <h1>Hi, I’m Shahriar Jaman Mahee</h1>
-                <p class="subtitle">Class 12 Science Student</p>
-                <p class="intro">Passionate about science, technology, and innovation, I dream of a future in research, engineering, or scientific discovery. From unraveling the mysteries of the universe to building solutions that impact society, I'm driven by curiosity and a relentless pursuit of knowledge.</p>
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Profile Photo of [Your Name]" class="profile-photo">
+                <h1>[Your Name]</h1>
+                <p class="role">Software Developer & Student</p>
+                <p class="tagline">Building innovative solutions with passion and precision.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">View Portfolio</a>
+                    <button id="download-transcript" class="btn secondary">Download Transcript</button>
+                </div>
+            </div>
+            <div class="hero-bg">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1200&h=800&fit=crop" alt="Hero Background" class="hero-image">
             </div>
         </section>
 
+        <!-- About Me Section -->
         <section id="about" class="section">
             <div class="container">
                 <h2>About Me</h2>
-                <div class="card">
-                    <p>As a dedicated Class 12 Science student from Bangladesh, I have a strong foundation in Physics, Chemistry, Biology, Mathematics, and Technology. My interests extend beyond academics to sports like Football and Cricket, which have taught me discipline, leadership, and teamwork. I aspire to become a scientist, engineer, or researcher, contributing to advancements that benefit Bangladesh and the world.</p>
-                </div>
+                <p>I am a dedicated software developer and student with a passion for creating efficient, user-friendly applications. My focus is on full-stack development, AI integration, and continuous learning in tech.</p>
             </div>
         </section>
 
+        <!-- Educational Section -->
         <section id="education" class="section">
             <div class="container">
                 <h2>Education</h2>
-                <div class="card">
-                    <h3>Higher Secondary Certificate (HSC)</h3>
-                    <p><strong>Group:</strong> Science</p>
-                    <p><strong>College:</strong> [Your College Name]</p>
-                    <p><strong>Subjects:</strong> Physics, Chemistry, Higher Math, Biology</p>
+                <div class="education-item">
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <p>University of Example, 2020 - 2024</p>
+                    <p>Achievements: Dean's List, GPA 3.8</p>
                 </div>
             </div>
         </section>
 
+        <!-- Skills Section -->
         <section id="skills" class="section">
             <div class="container">
                 <h2>Skills</h2>
                 <div class="skills-grid">
-                    <div class="skill-card">Problem Solving</div>
-                    <div class="skill-card">Analytical Thinking</div>
-                    <div class="skill-card">Scientific Thinking</div>
-                    <div class="skill-card">Basic Computer Skills</div>
-                    <div class="skill-card">Laboratory Skills</div>
-                    <div class="skill-card">Teamwork and Leadership</div>
-                    <div class="skill-card">Time Management</div>
+                    <div class="skill">
+                        <h3>JavaScript</h3>
+                        <div class="progress-bar"><div class="progress" data-percent="90"></div></div>
+                    </div>
+                    <div class="skill">
+                        <h3>Python</h3>
+                        <div class="progress-bar"><div class="progress" data-percent="85"></div></div>
+                    </div>
+                    <div class="skill">
+                        <h3>React</h3>
+                        <div class="progress-bar"><div class="progress" data-percent="80"></div></div>
+                    </div>
+                    <div class="skill">
+                        <h3>Node.js</h3>
+                        <div class="progress-bar"><div class="progress" data-percent="75"></div></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="achievements" class="section">
+        <!-- Projects Section -->
+        <section id="projects" class="section">
             <div class="container">
-                <h2>Achievements</h2>
-                <div class="achievements-grid">
-                    <div class="card">
-                        <h3>Strong Academic Performance</h3>
-                        <p>Maintained top grades in Science subjects.</p>
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop" alt="Project 1">
+                        <h3>E-Commerce App</h3>
+                        <p>Built with React and Node.js.</p>
                     </div>
-                    <div class="card">
-                        <h3>Science Fair Participation</h3>
-                        <p>Presented innovative projects on renewable energy.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Olympiad Competitions</h3>
-                        <p>Awarded in Physics and Math Olympiads.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Sports Tournaments</h3>
-                        <p>Captain of school football and cricket teams.</p>
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop" alt="Project 2">
+                        <h3>AI Chatbot</h3>
+                        <p>Python-based NLP project.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="goals" class="section">
+        <!-- Experience Section -->
+        <section id="experience" class="section">
             <div class="container">
-                <h2>Future Goals</h2>
-                <div class="card">
-                    <p>My goal is to study science at a top university, pursuing a career as a scientist, engineer, or researcher. I aim to leverage science and technology to address societal challenges in Bangladesh, from healthcare innovations to sustainable development.</p>
+                <h2>Experience</h2>
+                <div class="experience-item">
+                    <h3>Intern at Tech Corp</h3>
+                    <p>2023 - Present</p>
+                    <p>Developed web applications and collaborated on team projects.</p>
                 </div>
             </div>
         </section>
 
-        <section id="hobbies" class="section">
+        <!-- Certifications Section -->
+        <section id="certifications" class="section">
             <div class="container">
-                <h2>Hobbies & Sports</h2>
-                <div class="hobbies-grid">
-                    <div class="card">
-                        <h3>Football Passion</h3>
-                        <p>Playing football enhances my fitness, focus, and teamwork skills.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Cricket Passion</h3>
-                        <p>Cricket builds discipline and strategic thinking on and off the field.</p>
-                    </div>
-                </div>
+                <h2>Certifications & Achievements</h2>
+                <ul>
+                    <li>Google Cloud Professional Developer</li>
+                    <li>AWS Certified Solutions Architect</li>
+                </ul>
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="section">
             <div class="container">
-                <h2>Contact</h2>
-                <div class="contact-grid">
-                    <div class="card">
-                        <h3>Get in Touch</h3>
-                        <p>Email: [your.email@example.com]</p>
-                        <div class="social-icons">
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <form id="contact-form">
-                            <input type="text" placeholder="Your Name" required>
-                            <input type="email" placeholder="Your Email" required>
-                            <textarea placeholder="Your Message" required></textarea>
-                            <button type="submit">Send Message</button>
-                        </form>
-                    </div>
+                <h2>Contact Me</h2>
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section id="social" class="section">
+            <div class="container">
+                <h2>Follow Me</h2>
+                <div class="social-links">
+                    <a href="https://instagram.com/yourprofile" target="_blank" class="social-icon instagram">Instagram</a>
+                    <a href="https://facebook.com/yourprofile" target="_blank" class="social-icon facebook">Facebook</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 Shahriar Jaman Mahee. All rights reserved.</p>
+        <p>&copy; 2023 [Your Name]. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
+            <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
-    <script>
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click',()=>{
-    navLinks.classList.toggle('active');
-});
-                                         </script>
 </body>
 </html>
