@@ -1,38 +1,42 @@
-// Smooth Scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+// Smooth scrolling for navigation
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
     });
 });
 
-// Mobile Menu Toggle
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+// ScrollReveal animations
+ScrollReveal().reveal('.section', { delay: 200, distance: '50px', origin: 'bottom' });
+ScrollReveal().reveal('.hero-content', { delay: 300, distance: '50px', origin: 'left' });
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-// Fade-in Animation on Scroll
+// Animate skill bars on scroll
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            const progress = entry.target.querySelector('.progress');
+            const percent = progress.dataset.percent;
+            progress.style.width = `${percent}%`;
         }
     });
-}, { threshold: 0.1 });
+}, { threshold: 0.5 });
 
-document.querySelectorAll('.card, .skill-card').forEach(card => {
-    card.classList.add('fade-in');
-    observer.observe(card);
-});
+document.querySelectorAll('.skill').forEach(skill => observer.observe(skill));
 
-// Contact Form Submission (Basic Alert for Demo)
+// Contact form handling
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    alert('Thank you for your message! I will get back to you soon.');
+    const formData = new FormData(this);
+    console.log('Form submitted:', Object.fromEntries(formData));
+    alert('Message sent! (Demo - check console)');
     this.reset();
+});
+
+// PDF Download for Transcripts
+document.getElementById('download-transcript').addEventListener('click', function() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    doc.text('Transcript Placeholder', 10, 10);
+    doc.save('transcript.pdf');
 });
