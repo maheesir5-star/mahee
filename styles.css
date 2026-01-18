@@ -291,3 +291,108 @@ footer {
         height: 200px;
     }
 }
+/* ===================================== */
+/* FINAL RESPONSIVE FIX (MOBILE + DESKTOP) */
+/* ===================================== */
+
+/* ---------- LARGE DESKTOP (1200px+) ---------- */
+@media (min-width: 1200px) {
+    .hero {
+        padding: 0 80px;
+    }
+
+    .hero-content {
+        text-align: left;
+    }
+
+    .hero-bg {
+        width: 45%;
+    }
+}
+
+/* ---------- DESKTOP / LAPTOP ---------- */
+@media (max-width: 1199px) and (min-width: 769px) {
+    .hero {
+        padding: 0 40px;
+    }
+
+    .hero-bg {
+        width: 50%;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+}
+
+/* ---------- TABLET ---------- */
+@media (max-width: 768px) {
+    header {
+        position: relative;
+    }
+
+    .hero {
+        height: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .hero-bg {
+        position: relative;
+        width: 100%;
+        height: 260px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.25;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 20px 15px;
+    }
+
+    .hero-bg {
+        height: 200px;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+        border-width: 4px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    nav ul {
+        align-items: center;
+    }
+}
